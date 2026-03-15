@@ -6,9 +6,6 @@
 
     <title>News Homepage</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
@@ -19,12 +16,12 @@
 
   <body>
     <header class="container">
-      <div class="nav_hero">
+      <div class="nav">
         <div class="logo">
-          <img src="./imgs/W..svg" alt="logo" />
+          <img src="./imgs/W..svg" alt="" />
         </div>
 
-        <nav class="nav__a" id="navMenu">
+        <nav class="menu" id="menu">
           <a href="#">Home</a>
           <a href="#">New</a>
           <a href="#">Popular</a>
@@ -32,23 +29,23 @@
           <a href="#">Categories</a>
         </nav>
 
-        <button class="burger" id="burger">
+        <div class="burger" id="burger">
           <span></span>
           <span></span>
           <span></span>
-        </button>
+        </div>
       </div>
     </header>
 
     <main class="container">
       <section class="hero">
         <div class="hero-left">
-          <img src="./imgs/img-hero.jpg" class="hero-img" alt="web3" />
+          <img src="./imgs/img-hero.jpg" class="hero-img" alt="" />
 
-          <div class="hero-bottom">
+          <div class="hero-text">
             <h1>The Bright Future of Web 3.0?</h1>
 
-            <div class="hero-text">
+            <div class="hero-desc">
               <p>
                 We dive into the next evolution of the web that claims to put
                 the power of the platforms back into the hands of the people.
@@ -60,7 +57,7 @@
           </div>
         </div>
 
-        <aside class="sidebar">
+        <div class="hero-right">
           <h2>New</h2>
 
           <div class="news">
@@ -81,34 +78,34 @@
             <h3>Is VC Funding Drying Up?</h3>
             <p>Private funding by VC firms is down 50% YOY.</p>
           </div>
-        </aside>
+        </div>
       </section>
 
       <section class="articles">
-        <div class="card">
-          <img src="./imgs/img-compu.jpg" alt="pc" />
+        <div class="article">
+          <img src="./imgs/img-compu.jpg" alt="" />
 
-          <div class="card-text">
+          <div>
             <span>01</span>
             <h4>Reviving Retro PCs</h4>
             <p>What happens when old PCs are given modern upgrades?</p>
           </div>
         </div>
 
-        <div class="card">
+        <div class="article">
           <img src="./imgs/img-klavi.jpg" alt="" />
 
-          <div class="card-text">
+          <div>
             <span>02</span>
             <h4>Top 10 Laptops of 2022</h4>
             <p>Our best picks for various needs and budgets.</p>
           </div>
         </div>
 
-        <div class="card">
-          <img src="./imgs/img-jostiki.jpg" alt="jostik" />
+        <div class="article">
+          <img src="./imgs/img-jostiki.jpg" alt="" />
 
-          <div class="card-text">
+          <div>
             <span>03</span>
             <h4>The Growth of Gaming</h4>
             <p>How the pandemic has sparked fresh opportunities.</p>
@@ -119,10 +116,11 @@
 
     <script>
       const burger = document.getElementById("burger");
-      const nav = document.getElementById("navMenu");
+      const menu = document.getElementById("menu");
 
       burger.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        burger.classList.toggle("active");
+        menu.classList.toggle("active");
       });
     </script>
   </body>
